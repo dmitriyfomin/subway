@@ -121,10 +121,10 @@ class Program
      *
      * @return void
      */
-    public function main() : void
+    public static function main() : void
     {
-        $balance = $this->getBalance();
-        $cost = $this->cost;
+        $balance = (new Program())->getBalance();
+        $cost = (new Program())->cost;
 
         echo str_repeat('=', 30) . PHP_EOL;
         echo 'Баланс: ' . $balance . ' руб.' . PHP_EOL;
@@ -184,4 +184,4 @@ class Program
     }
 }
 
-PHP_VERSION >= 7.4 ? (new Program())->main() : exit('Требуется версия PHP не ниже 7.4');
+PHP_VERSION >= 7.4 ? Program::main() : exit('Требуется версия PHP не ниже 7.4');
