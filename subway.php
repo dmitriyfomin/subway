@@ -38,7 +38,7 @@ abstract class Turniket
         echo self::ENTER_COST . ' руб. списаны со счёта.' . PHP_EOL;
         echo 'Открывается турникет №' . $num . ' ...' . PHP_EOL;
         echo $message . PHP_EOL;
-        \sleep(self::WAIT_ENTER); // открыт определённое кол-во секунд
+        sleep(self::WAIT_ENTER); // открыт определённое кол-во секунд
         echo 'Турникет №' . $num . ' закрывается.' . PHP_EOL;
     }
 
